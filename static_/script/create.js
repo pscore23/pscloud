@@ -11,9 +11,14 @@ function create() {
 
     window.location.href = "/";
 
-    window.document.querySelector("#insert").innerHTML = `
-        ${path}
-    `;
-
-    _setState(path);
+    window.onload = () => {
+        window.document.querySelector("#insert").innerHTML = `
+            ${path}
+        `;
+        _setState(path);
+    }
 };
+
+window.onload = () => {
+    create();
+}
