@@ -6,7 +6,7 @@ function _setState(text) {
     window.history.replaceState({}, "", `/project/id/${text}`);
 };
 
-export function create() {
+function create() {
     let path = _getPath();
 
     window.location.href = "/";
